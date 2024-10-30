@@ -15,4 +15,6 @@ A basketball Apparel Web-Shop
 > 
 > Users (customer) will swill be able to causally shop and have options pushed to them. Whether they're shopping as a guest or logged into an account that saves their prefences, customers will be able to get the best expeirnce shopping with Nothin' But Net.
 > 
-> SysAdmins can detect the inventory stocks and refil when it's running low. 
+> The Provider is responsible for monotoring the inventory and ordering new stock based on the trends and sales statistics
+> 
+> SysAdmins can manages the customer reviews and upholds the website's terms of service
