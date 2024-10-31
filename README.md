@@ -13,7 +13,7 @@ A basketball Apparel Web-Shop
 >
 > The site will be divided into section, the main one being Mens and Womens ware. From there, users will be able to filter through products by; price, relevancy, brand, size, etc. There will be the Shoewear, On-Court Apperal, and Casual Wear departments.
 > 
-> Users (customer) will swill be able to causally shop and have options pushed to them. Whether they're shopping as a guest or logged into an account that saves their prefences, customers will be able to get the best expeirnce shopping with Nothin' But Net.
+> Users (customer) will still be able to causally shop and have options pushed to them. Whether they're shopping as a guest or logged into an account that saves their prefences, customers will be able to get the best expeirnce shopping with Nothin' But Net.
 > 
 > The Provider is responsible for monotoring the inventory and ordering new stock based on the trends and sales statistics
 > 
