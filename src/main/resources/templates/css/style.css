@@ -1,0 +1,13 @@
+body{
+	background-color: rgb(255, 253, 240);
+	width: 90%;
+    margin: 0 auto; /* This centers the webpage */
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#Men_and_Womens_Navigation_Menu {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}

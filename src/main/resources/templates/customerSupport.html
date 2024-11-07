@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Customer Support Page</title>
+</head>
+
+<body>
+
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
+	<div>
+		<a href="Index.html">Home</a> |
+		<a href="SignUpPage.html" style="color: black;">Join Today</a> |
+		<a href="LoginPage.html" style="color: black;">Sign In</a>
+	</div>
+
+	<div>
+		<form action="/search" method="GET" style="display: inline-block;">
+			<label for="search-query" style="display: none;">Search</label>
+			<input type="text" id="search-query" name="query" placeholder="Search..." style="padding: 5px;">
+			<button type="submit" style="padding: 5px 10px;">Search</button>
+		</form>
+	</div>
+</div>
+
+<hr>
+
+<div id="Banner">
+	<header style="position: relative; text-align: center;">
+		<img src="images/Banner.jpg" alt="Nothin' But Net Banner" style="width: 100%; height: auto;">
+		<div style="position: absolute; top: 70%; left: 50%; transform: translate(-50%, -50%);">
+			<h1 style="color: white; font-size: 3rem; font-weight: bold;">We're Not Ref's But You Can Still Complain...</h1>
+		</div>
+	</header>
+</div>
+
+<hr>
+
+<div style="display: flex; justify-content: space-around; width: 90%; margin: 20px auto; gap: 20px;">
+
+	<!-- Terms of Service Section -->
+	<div id="TermsOfService" style="flex: 1; padding: 20px; background-color: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+		<h2>Terms of Service</h2>
+		<p>
+			At Nothin' But Net, we encourage our customers to share their experiences by leaving reviews on our products. We value open and honest feedback as it helps us continually improve our offerings and provide the best service possible. However, to maintain a respectful and positive community, we require that all reviews be free from offensive language or content that could be deemed inappropriate.
+
+			If Nothin' But Net determines that a review violates our Terms of Service, we reserve the right to remove the offending comment. In cases of repeated violations, Nothin' But Net has the authority to cancel the customer’s membership on our website to uphold community standards and ensure a welcoming environment for all.
+		</p>
+	</div>
+
+	<!-- Leave Review Section -->
+	<div id="LeaveReview" style="flex: 1; padding: 20px; background-color: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+		<h2>Submit Your Feedback</h2>
+		<p>We sincerely apologize for any inconveniences you may have experienced while shopping with us. Your feedback is important to us, and we are committed to improving our services to ensure a better experience for all our customers.</p>
+		<form action="/submit-review" method="POST">
+			<label for="name">Your Name:</label><br>
+			<input type="text" id="name" name="name" required style="width: 100%; padding: 5px;"><br><br>
+
+			<label for="complaint">Your Complaint:</label><br>
+			<textarea id="complaint" name="complaint" rows="4" required style="width: 100%; padding: 5px;"></textarea><br><br>
+
+			<button type="submit" style="padding: 10px 20px; background-color: black; color: white;">Submit</button>
+		</form>
+	</div>
+</div>
+
+</body>
+
+</html>

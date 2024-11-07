@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<title>AE1 Product Page</title>
+</head>
+
+<body>
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
+	<div>
+		<a href="Index.html">Home</a> |
+		<a href="SignUpPage.html" style="color: black;">Join Today</a> |
+		<a href="LoginPage.html" style="color: black;">Sign In</a> |
+		<a href="customerSupport.html" style="color: black;">Customer Support</a>
+	</div>
+	<div>
+		<form action="/search" method="GET" style="display: inline-block;">
+			<label for="search-query" style="display: none;">Search</label>
+			<input type="text" id="search-query" name="query" placeholder="Search..." style="padding: 5px;">
+			<button type="submit" style="padding: 5px 10px;">Search</button>
+		</form>
+	</div>
+</div>
+
+<hr>
+
+<div id="Banner">
+	<header style="position: relative; text-align: center;">
+		<img src="images/Banner.jpg" alt="Nothin' But Net Banner" style="width: 100%; height: auto;">
+		<div style="position: absolute; top: 70%; left: 50%; transform: translate(-50%, -50%);">
+			<h1 style="color: white; font-size: 5rem; font-weight: bold;">NOTHIN' BUT NET</h1>
+		</div>
+	</header>
+</div>
+
+<hr>
+
+<div style="display: flex; flex-direction: column; align-items: center;">
+	<img src="images/ae1s.jpg" alt="Adidas AE1 Shoes" style="width: 50%; height: auto;">
+
+	<div style="text-align: center; margin-top: 20px;">
+		<h2>Adidas AE1 Shoes</h2>
+		<p>Step up your game with the new Adidas AE1. Built for performance, designed for style.</p>
+
+		<div style="display: flex; align-items: center; justify-content: flex-start;">
+			<div>
+				<label for="size">Select your size:</label><br>
+				<select name="size" id="size">
+					<option value="kids-4">Kids 4</option>
+					<option value="kids-5">Kids 5</option>
+					<option value="kids-6">Kids 6</option>
+					<option value="kids-7">Kids 7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+				</select>
+			</div>
+
+			<div style="margin-left: 20px;">
+				<a href="cart.html" style="padding: 10px 20px; background-color: black; color: white; text-decoration: none; text-align: center;">$95.00: Add to Cart</a>
+			</div>
+
+			<div style="margin-left: 20px;">
+				<a href="memberFavorites.html" style="padding: 10px 20px; background-color: black; color: white; text-decoration: none; text-align: center;">Add to Favorites</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<hr>
+
+<div id="ProductReview" style="display: flex; justify-content: space-between; margin-top: 20px;">
+	<div style="flex: 1; padding: 20px; background-color: #f9f9f9; border-radius: 5px;">
+		<h3>Leave a Review:</h3>
+		<form>
+			<label for="customerName">Your Name:</label><br>
+			<input type="text" id="customerName" name="customerName" style="width: 100%; padding: 8px; margin-bottom: 10px;"><br>
+
+			<label for="reviewText">Your Review:</label><br>
+			<textarea id="reviewText" name="reviewText" rows="4" style="width: 100%; padding: 8px; margin-bottom: 10px;"></textarea><br>
+
+			<input type="submit" value="Submit Review" style="padding: 10px 20px; background-color: black; color: white; border: none; cursor: pointer;">
+		</form>
+	</div>
+
+	<div style="flex: 1; padding: 20px; background-color: #f9f9f9; border-radius: 5px; margin-left: 20px;">
+		<h3>Customer Reviews:</h3>
+		<div style="margin-bottom: 10px;">
+			<strong>Emily R.</strong>
+			<p>"I absolutely love the Adidas AE1! The comfort and support are unmatched, making them perfect for both on and off the court. I've noticed a significant improvement in my game since I started wearing them. Highly recommend!"</p>
+		</div>
+		<div style="margin-bottom: 10px;">
+			<strong>Daniel T.</strong>
+			<p>"These shoes are a game changer! The traction is incredible, and they look fantastic. I've received so many compliments. Anthony Edwards truly knocked it out of the park with these. A must-have for any basketball player!"</p>
+		</div>
+		<div style="margin-bottom: 10px;">
+			<strong>Sophie L.</strong>
+			<p>"The AE1 is the perfect blend of style and performance. They're lightweight yet provide excellent ankle support. I wear them every time I hit the gym, and they never disappoint. Can't wait for the next colorway to drop!"</p>
+		</div>
+		<div style="margin-bottom: 10px;">
+			<strong>James K.</strong>
+			<p>"As a lifelong basketball fan, I've tried many shoes, but the AE1 stands out. The cushioning feels amazing, and I love the sleek design. They're my go-to pair for every game and practice!"</p>
+		</div>
+		<div style="margin-bottom: 10px;">
+			<strong>Maya P.</strong>
+			<p>"These shoes are not only stylish but also incredibly functional. The grip on the court is fantastic, and I feel confident making quick cuts and jumps. Anthony Edwards did an excellent job with these—definitely worth the investment!"</p>
+		</div>
+	</div>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>Admin Dashboard</title>
+</head>
+
+<body>
+
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
+  <div>
+    <a href="Index.html">Home</a> |
+    <a href="SignUpPage.html" style="color: black;">Join Today</a> |
+    <a href="LoginPage.html" style="color: black;">Sign In</a>
+  </div>
+</div>
+
+<hr>
+
+<div id="Banner">
+  <header style="position: relative; text-align: center;">
+    <img src="images/Banner.jpg" alt="Nothin' But Net Banner" style="width: 100%; height: auto;">
+    <div style="position: absolute; top: 70%; left: 50%; transform: translate(-50%, -50%);">
+      <h1 style="color: white; font-size: 5rem; font-weight: bold;">Admin</h1>
+    </div>
+  </header>
+</div>
+
+<hr>
+
+<h2>Member: <em>member username</em></h2>
+<div style="width: 80%; margin: 20px auto; padding: 20px; background-color: #f9f9f9; border-radius: 5px;">
+  <h2>Member's Product Reviews</h2>
+  <fieldset style="height: 300px; overflow-y: scroll; padding: 10px; border: 1px solid #ccc;">
+    <!-- Content for reviews goes here -->
+  </fieldset>
+</div>
+
+<h2 style="text-align: center;">Manage Members Access</h2>
+<div style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 80%; margin: 0 auto;">
+  <table style="width: 100%; border-collapse: collapse; margin-bottom: 30px;">
+    <thead>
+    <tr>
+      <th style="border: 1px solid #ccc; padding: 10px;">Member ID</th>
+      <th style="border: 1px solid #ccc; padding: 10px;">Name</th>
+      <th style="border: 1px solid #ccc; padding: 10px;">Email</th>
+      <th style="border: 1px solid #ccc; padding: 10px;">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 10px;">3</td>
+      <td style="border: 1px solid #ccc; padding: 10px;">Alex Johnson</td>
+      <td style="border: 1px solid #ccc; padding: 10px;">alexjohnson@gmail.com</td>
+      <td style="border: 1px solid #ccc; padding: 10px;">
+        <button style="background-color: red; color: white; border: none; padding: 5px 10px; cursor: pointer;">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<br>
+
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Customer Cart Page</title>
+	<style>
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			margin-top: 20px;
+		}
+		th, td {
+			border: 1px solid #ddd;
+			padding: 10px;
+			text-align: left;
+		}
+		th {
+			background-color: #f2f2f2;
+		}
+		.total {
+			font-weight: bold;
+			font-size: 1.2rem;
+		}
+		.buy-button {
+			padding: 10px 20px;
+			background-color: #28a745;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 1.2rem;
+			margin-top: 20px;
+		}
+		.buy-button:hover {
+			background-color: #218838;
+		}
+	</style>
+</head>
+
+<body>
+
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
+	<div>
+		<a href="Index.html">Home</a> |
+		<a href="SignUpPage.html" style="color: black;">Join Today</a> |
+		<a href="LoginPage.html" style="color: black;">Sign In</a> |
+		<a href="customerSupport.html" style="color: black;">Customer Support</a>
+	</div>
+
+	<div>
+		<form action="/search" method="GET" style="display: inline-block;">
+			<label for="search-query" style="display: none;">Search</label>
+			<input type="text" id="search-query" name="query" placeholder="Search..." style="padding: 5px;">
+			<button type="submit" style="padding: 5px 10px;">Search</button>
+		</form>
+	</div>
+</div>
+
+<hr>
+
+<div id="Banner">
+	<header style="position: relative; text-align: center;">
+		<img src="images/Banner.jpg" alt="Nothin' But Net Banner" style="width: 100%; height: auto;">
+		<div style="position: absolute; top: 70%; left: 50%; transform: translate(-50%, -50%);">
+			<h1 style="color: white; font-size:5rem; font-weight: bold;">NOTHIN' BUT NET</h1>
+		</div>
+	</header>
+</div>
+
+<hr>
+
+<h2 style="text-align: center;">Your Cart</h2>
+
+<table>
+	<thead>
+	<tr>
+		<th>Product Name</th>
+		<th>Size</th>
+		<th>Price</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>Adidas AE1</td>
+		<td>10</td>
+		<td>$95.00</td>
+	</tr>
+	<tr>
+		<td>Nike Ja 2</td>
+		<td>9</td>
+		<td>$100.00</td>
+	</tr>
+	</tbody>
+	<tfoot>
+	<tr>
+		<td class="total" colspan="2">Total:</td>
+		<td class="total">$195.00</td>
+	</tr>
+	</tfoot>
+</table>
+
+<form style="margin-top: 20px;">
+	<label for="BillName">Name On Card:</label><br>
+	<input type="text" id="BillName" name="BillName" required><br>
+
+	<label for="cardNumber">Card Detail:</label><br>
+	<input type="text" id="cardNumber" name="cardNumber" required><br>
+
+	<label for="securityCode">Security Code:</label><br>
+	<input type="text" id="securityCode" name="securityCode" required><br>
+
+	<label for="billingAddress">Billing Address:</label><br>
+	<input type="text" id="billingAddress" name="billingAddress" required><br>
+
+	<label for="deliveryAddress">Delivery Address:</label><br>
+	<input type="text" id="deliveryAddress" name="deliveryAddress" required><br>
+
+	<label for="email">Email for Receipt:</label><br>
+	<input type="email" id="email" name="email" required><br>
+</form>
+
+<button class="buy-button">Buy Cart</button>
+
+<hr>
+
+</body>
+
+</html>

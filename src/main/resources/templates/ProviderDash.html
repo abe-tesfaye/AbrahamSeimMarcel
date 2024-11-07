@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Provider Page</title>
+</head>
+<body>
+<a href="Index.html">Home</a>
+<hr>
+<div id="Banner">
+  <header style="position: relative; text-align: center;">
+    <img src="images/Banner.jpg" alt="Nothin' But Net Banner" style="width: 100%; height: auto;">
+    <div style="position: absolute; top: 70%; left: 50%;transform: translate(-50%, -50%);">
+      <h1 style="color: white; font-size:5rem; font-weight: bold;">NOTHIN' BUT NET</h1>
+    </div>
+  </header>
+</div>
+
+<hr>
+<div style="padding: 20px;">
+
+
+
+  <h2 style="text-align: center;">Manage Inventory</h2>
+  <form action="order_stock.php" method="POST"> <!-- Add your action URL here -->
+    <table style="width: 100%; border-collapse: collapse;">
+      <thead>
+      <tr>
+        <th style="border: 1px solid #ccc; padding: 10px;">Product ID</th>
+        <th style="border: 1px solid #ccc; padding: 10px;">Product Name</th>
+        <th style="border: 1px solid #ccc; padding: 10px;">Stock Amount</th>
+        <th style="border: 1px solid #ccc; padding: 10px;">Order Amount</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td style="border: 1px solid #ccc; padding: 10px;">101</td>
+        <td style="border: 1px solid #ccc; padding: 10px;">Adidas AE1</td>
+        <td style="border: 1px solid #ccc; padding: 10px;">50</td>
+        <td style="border: 1px solid #ccc; padding: 10px;">
+          <input type="number" name="order_amount_101" min="1" placeholder="Order Amount" style="padding: 5px; width: 100%;">
+        </td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ccc; padding: 10px;">102</td>
+        <td style="border: 1px solid #ccc; padding: 10px;">Nike Ja 2</td>
+        <td style="border: 1px solid #ccc; padding: 10px;">30</td>
+        <td style="border: 1px solid #ccc; padding: 10px;">
+          <input type="number" name="order_amount_102" min="1" placeholder="Order Amount" style="padding: 5px; width: 100%;">
+        </td>
+      </tr>
+      <!-- Add more products as needed -->
+      </tbody>
+    </table>
+    <div style="text-align: center; margin-top: 20px;">
+      <button type="submit" style="background-color: green; color: white; border: none; padding: 10px 20px; cursor: pointer;">Submit Stock Orders</button>
+    </div>
+  </form>
+
+  <h2 style="text-align: center; margin-top: 30px;">Product Attention Stats</h2>
+  <table style="width: 100%; border-collapse: collapse;">
+    <thead>
+    <tr>
+      <th style="border: 1px solid #ccc; padding: 10px;">Product ID</th>
+      <th style="border: 1px solid #ccc; padding: 10px;">Product Name</th>
+      <th style="border: 1px solid #ccc; padding: 10px;">Views per Week</th>
+      <th style="border: 1px solid #ccc; padding: 10px;">Reviews per Week</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 10px;">101</td>
+      <td style="border: 1px solid #ccc; padding: 10px;">Adidas AE1</td>
+      <td style="border: 1px solid #ccc; padding: 10px;">1,200</td>
+      <td style="border: 1px solid #ccc; padding: 10px;">45</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 10px;">102</td>
+      <td style="border: 1px solid #ccc; padding: 10px;">Nike Ja 2</td>
+      <td style="border: 1px solid #ccc; padding: 10px;">900</td>
+      <td style="border: 1px solid #ccc; padding: 10px;">30</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 10px;">103</td>
+      <td style="border: 1px solid #ccc; padding: 10px;">WNBA Logo Hoodie</td>
+      <td style="border: 1px solid #ccc; padding: 10px;">1,500</td>
+      <td style="border: 1px solid #ccc; padding: 10px;">50</td>
+    </tr>
+    <!-- Add more product stats as needed -->
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

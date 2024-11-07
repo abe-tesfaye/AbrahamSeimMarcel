@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Admin Login</title>
+</head>
+
+<body>
+
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
+  <div>
+    <a href="Index.html">Home</a> |
+    <a href="SignUpPage.html" style="color: black;">Join Today</a> |
+    <a href="LoginPage.html" style="color: black;">Sign In</a>
+  </div>
+</div>
+
+<hr>
+
+<div id="Banner">
+  <header style="position: relative; text-align: center;">
+    <img src="images/Banner.jpg" alt="Nothin' But Net Banner" style="width: 100%; height: auto;">
+    <div style="position: absolute; top: 70%; left: 50%; transform: translate(-50%, -50%);">
+      <h1 style="color: white; font-size: 5rem; font-weight: bold;">Admin</h1>
+    </div>
+  </header>
+</div>
+
+<br>
+
+<fieldset style="border: none; padding: 0;">
+  <div id="SearchAccount" style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 400px; margin: 0 auto;">
+    <h2>Admin Login</h2>
+    <form action="AdminSearch.html" method="get">
+      <label for="AdminUsername">Admin Username:</label>
+      <input type="text" id="AdminEmail" name="AdminEmail" style="width: 100%;"><br><br>
+
+      <label for="AdminPassword">Password:</label>
+      <input type="password" id="AdminPassword" name="AdminPass" style="width: 100%;"><br><br>
+
+      <input type="submit" value="Login" style="width: 100%;">
+    </form>
+  </div>
+</fieldset>
+
+</body>
+
+</html>

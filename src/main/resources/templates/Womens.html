@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Womens Catalogue Page</title>
+</head>
+<body>
+	<div style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">		
+		<div>
+			<a href="Index.html">Home</a> | 
+			<a href="SignUpPage.html" style="color: black;">Join Today</a> | 
+			<a href="LoginPage.html" style="color: black;">Sign In</a> |
+			<a href="customerSupport.html" style="color: black;">Customer Support</a> 
+		</div>
+		<div>
+			<form action="/search" method="GET" style="display: inline-block;">
+				<input type="text" name="query" placeholder="Search..." style="padding: 5px;">
+				<button type="submit" style="padding: 5px 10px;">Search</button>
+			</form>
+		</div>
+	</div>
+	<hr/>
+
+	<div id="Banner">
+		<header style="position: relative; text-align: center;">
+			<img src="images/Banner.jpg" alt="Nothin' But Net Banner" style="width: 100%; height: auto;">
+			<div style="position: absolute; top: 70%; left: 50%;transform: translate(-50%, -50%);">
+				<h1 style="color: white; font-size:5rem; font-weight: bold;">NOTHIN' BUT NET</h1>
+			</div>
+		</header>
+	</div>
+	<hr>
+	<div style="display: flex;">
+		
+		<div id="MensSections" style="flex: 1; padding: 20px; background-color: #f4f4f4;">
+			<h3>On Court Shoes</h3>
+			<h3>Off Court Shoes</h3>
+			<h3>Jerseys</h3>
+			<h3>Jackets and Hoodies</h3>
+			<h3>Shorts and Pants</h3>
+			<h3>On Court Accessories</h3>
+		</div>
+
+		
+		<fieldset style="flex: 2; padding: 20px; border: 1px solid #ccc; border-radius: 5px; margin-left: 20px;">
+			<legend style="font-weight: bold;">Product Catalog</legend>
+
+			<div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+				<div style="position: relative; display: inline-block; width: 48%; margin-bottom: 20px;">
+					<img src="images/Sabrina2.jpg" alt="Sabrina Ionescu 2nd Signature Show" style="width: 100%; height: auto;">
+					<div style="position: absolute; bottom: 20px; left: 10px; font-size: 1.25rem; font-weight: bold;">
+						<a href="Sabrina2.html" style="color: white;">Nike Sabrina 2</a>
+					</div>
+					<div style="position: absolute; top: 10px; right: 10px; font-size: 1.25rem; font-weight: bold; color: white; background-color: rgba(0, 0, 0, 0.7); padding: 5px; border-radius: 5px;">
+						$100.00
+					</div>
+				</div>
+
+				<div style="position: relative; display: inline-block; width: 48%; margin-bottom: 20px;">
+					<img src="images/wnbaHoodie.jpg" alt="WNBA Logo Hoodie" style="width: 100%; height: auto;">
+					<div style="position: absolute; bottom: 8px; left: 10px; font-size: 1.25rem; font-weight: bold;">
+						<a href="wnbaHoodie.html" style="color: black;">WNBA Hoodie</a>
+					</div>
+					<div style="position: absolute; top: 10px; right: 10px; font-size: 1.25rem; font-weight: bold; color: white; background-color: rgba(0, 0, 0, 0.7); padding: 5px; border-radius: 5px;">
+						$30.00
+					</div>
+				</div>
+			</div>
+
+		</fieldset>
+	</div>
+</body>
+</html>

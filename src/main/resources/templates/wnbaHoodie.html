@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>WNBA Logo Hoode Product Page</title>
+</head>
+<body>
+		<div style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">		
+		<div>
+			<a href="Index.html">Home</a> | 
+			<a href="SignUpPage.html" style="color: black;">Join Today</a> | 
+			<a href="LoginPage.html" style="color: black;">Sign In</a> |
+			<a href="customerSupport.html" style="color: black;">Customer Support</a> 
+		</div>
+		<div>
+			<form action="/search" method="GET" style="display: inline-block;">
+				<input type="text" name="query" placeholder="Search..." style="padding: 5px;">
+				<button type="submit" style="padding: 5px 10px;">Search</button>
+			</form>
+		</div>
+	</div>
+
+	<hr/>
+
+	<div id="Banner">
+		<header style="position: relative; text-align: center;">
+			<img src="images/Banner.jpg" alt="Nothin' But Net Banner" style="width: 100%; height: auto;">
+			<div style="position: absolute; top: 70%; left: 50%;transform: translate(-50%, -50%);">
+				<h1 style="color: white; font-size:5rem; font-weight: bold;">NOTHIN' BUT NET</h1>
+			</div>
+		</header>
+	</div>
+	<hr>
+
+	<div id="Men_and_Womens_Navigation_Menu">
+		<p>
+			<a href="Mens.html" style="color: black;">Mens</a> 
+			<a href="Womens.html" style="color: black;">Women</a>
+		</p>
+	</div>
+	<hr>
+
+	<div style="display: flex; flex-direction: column; align-items: center;">
+
+		<img src="images/wnbaHoodie.jpg" alt="Nike Sabrina 2" style="width: 50%; height: auto;">
+
+		<div style="text-align: center; margin-top: 20px;">
+			<h2>Nike Sabrina 2</h2>
+			<p>Step up your style and performance on and off the court with the Sabrina 2—where cutting-edge design meets unmatched comfort, making every move feel effortless!</p>
+
+			<div style="display: flex; align-items: center; justify-content: flex-start;">
+				<div>
+					<label for="size">Select your size:</label><br>
+					<select name="size" id="size">
+						<option value="Kids S">Kids M</option>
+						<option value="Kids M">Kids M</option>
+						<option value="Kids L">Kids L</option>
+						<option value="Womens XS">Womens XS </option>
+						<option value="Womens S">Womens S</option>
+						<option value="Womens M">Womens M</option>
+						<option value="Womens L">Womens L</option>
+						<option value="Mens XS">Mens XS</option>
+						<option value="Mens S">Mens S</option>
+						<option value="Mens M">Mens M</option>
+						<option value="Mens L">Mens L</option>
+						<option value="Mens L">Mens XL</option>
+					</select>
+				</div>
+
+				<div style="margin-left: 20px;">
+					<a href="cart.html" style="padding: 10px 20px; background-color: black; color: white; text-decoration: none; text-align: center;">$30.00: Add to Cart</a>
+				</div>
+				<div style="margin-left: 20px;">
+					<a href="memberFavorites.html" style="padding: 10px 20px; background-color: black; color: white; text-decoration: none; text-align: center;">Add to Favorites</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr>
+
+	<div id="ProductReview" style="display: flex; justify-content: space-between; margin-top: 20px;">
+		<div style="flex: 1; padding: 20px; background-color: #f9f9f9; border-radius: 5px;">
+			<h3>Leave a Review:</h3>
+			<form>
+				<label for="customerName">Your Name:</label><br>
+				<input type="text" id="customerName" name="customerName" style="width: 100%; padding: 8px; margin-bottom: 10px;"><br>
+
+				<label for="reviewText">Your Review:</label><br>
+				<textarea id="reviewText" name="reviewText" rows="4" style="width: 100%; padding: 8px; margin-bottom: 10px;"></textarea><br>
+
+				<input type="submit" value="Submit Review" style="padding: 10px 20px; background-color: black; color: white; border: none; cursor: pointer;">
+			</form>
+		</div>
+
+		<div style="flex: 1; padding: 20px; background-color: #f9f9f9; border-radius: 5px; margin-left: 20px;">
+			<h3>Customer Reviews:</h3>
+			<div style="margin-bottom: 10px;">
+				<strong>Emily T.</strong>
+				<p>"I bought this hoodie for my daughter, who dreams of playing in the WNBA. She absolutely loves it! It's cozy and stylish, and she wears it everywhere!"</p>
+			</div>
+			<div style="margin-bottom: 10px;">
+				<strong>Brian L.</strong>
+				<p>"As a basketball coach, I love showing support for the women's game. This hoodie is not only comfortable, but it also sparks conversations with my players about role models in sports!"</p>
+			</div>
+			<div style="margin-bottom: 10px;">
+				<strong>Sarah P.</strong>
+				<p>"I'm not a huge sports fan, but I bought this hoodie because I love the vibrant orange color. It's perfect for casual outings and makes me feel like a part of something bigger!"</p>
+			</div>
+			<div style="margin-bottom: 10px;">
+				<strong>Mark J.</strong>
+				<p>"I got this hoodie as a gift for my sister, and she loves it! The material is soft and warm, making it perfect for those chilly game nights. Plus, the WNBA logo adds a nice touch!"</p>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Home Page</title>
+</head>
+
+<body>
+
+	<div style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
+		
+		<div>
+			<a href="Index.html">Home</a> | 
+			<a href="SignUpPage.html" style="color: black;">Join Today</a> | 
+			<a href="LoginPage.html" style="color: black;">Sign In</a> |
+			<a href="Admin.html" style="color: black;">Admin</a> |
+			<a href="provider.html" style="color: black;">Provider</a> |
+			<a href="customerSupport.html" style="color: black;">Customer Support</a> 
+		</div>
+
+		
+		<div>
+			<form action="/search" method="GET" style="display: inline-block;">
+				<label for="search-query" style="display: none;">Search</label>
+				<input type="text" id="search-query" name="query" placeholder="Search..." style="padding: 5px;">
+				<button type="submit" style="padding: 5px 10px;">Search</button>
+			</form>
+		</div>
+	</div>
+	<hr>
+	<div id="Banner">
+		<header style="position: relative; text-align: center;">
+			<img src="images/Banner.jpg" alt="Nothin But Net Banner" style="width: 100%; height: auto;">
+			<div style="position: absolute; top: 70%; left: 50%;transform: translate(-50%, -50%);">
+				<h1 style="color: white; font-size:5rem; font-weight: bold;">NOTHIN' BUT NET</h1>
+			</div>
+		</header>
+	</div>
+
+	<hr> 
+
+	<div id="Men_and_Womens_Navigation_Menu">
+		<p>
+			<a href="Mens.html" style="color: black;">Mens</a> 
+			<a href="Womens.html" style="color: black;">Women</a>
+		</p>
+	</div>
+	
+
+
+
+
+	<hr>
+
+	<div id="Home Page Products">
+
+		<div id="First Section">
+			<div style="display: flex; align-items: center;">
+				<div id="Example1">
+					<h3 style="font-family: serif;">
+						<a href="Mens.html" style="text-decoration: none; color: black;">Kid Jackets</a>
+					</h3>
+					<img src="images/KidsJacket.jpg" alt="Girls wearing Jackets" style="width: 90%; height: auto; margin-right: 20px;"> <!-- Add margin to create space -->
+				</div>
+
+				<div id="Example2" style="margin-left: 20px;"> 
+					<h3 style="font-family: serif;">
+						<a href="Mens.html" style="text-decoration: none; color: black;">Vintage Jersey</a>
+					</h3>
+					<img src="images/VintageJersey.jpg" alt="Close-up of Old all-star jersey" style="width: 90%; height: auto;">
+				</div>
+			</div>
+		</div>
+		
+		<div id="Second section">
+			<h2><u>Trending</u></h2>
+
+			<div style="display: flex; align-items: center;">
+				<div style="position: relative; display: inline-block;">
+					<img src="images/ae1.jpg" alt="Anthony Edwards first shoe" style="width: 90%; height: auto;">
+					<div style="position: absolute; bottom: 8px; left: 10px; font-size: 1.25rem; font-weight: bold;">
+						<a href="AE1.html" style="color: white;">Adidas AE1</a>
+					</div>
+				</div>
+
+
+				<div style="position: relative; display: inline-block;">
+					<img src="images/Ja2.jpg" alt="Ja Morant Second Signature Show Colorways" style="width: 30%; height: auto;">
+					<div style="position: absolute; bottom: 8px; left: 10px; font-size: 1.25rem; font-weight: bold;">
+						<a href="Ja2.html" style="color: white;">Nike Ja 2</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+
+</html>
