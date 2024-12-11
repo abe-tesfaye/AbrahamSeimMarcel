@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Admin</title>
+</head>
+<body>
+<h1>Edit Admin</h1>
+<form th:action="@{/admin/edit/{id}(id=${admin.adminId})}" method="post" th:object="${admin}">
+    <label>Username: <input type="text" name="username" th:value="${admin.username}" required></label><br>
+    <label>Password: <input type="password" name="password" th:value="${admin.password}" required></label><br>
+    <button type="submit">Update Admin</button>
+</form>
+<a href="/admin">Back to Admin List</a>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Member Dashboard</title>
+</head>
+<body>
+<header>
+  <h1>Member Dashboard</h1>
+  <a th:href="@{/admin/members}">Back to Search</a>
+  <hr>
+</header>
+
+<main>
+  <h2>Member Details</h2>
+  <p>Member ID: <span th:text="${member.memberId}"></span></p>
+  <p>Name: <span th:text="${member.firstName} + ' ' + ${member.lastName}"></span></p>
+  <p>Email: <span th:text="${member.email}"></span></p>
+  <p>Status: <span th:text="${member.status}"></span></p>
+
+  <h2>Member Reviews</h2>
+  <ul>
+    <!-- Thymeleaf Loop for Reviews -->
+    <li th:each="review : ${reviews}" th:text="${review.content}"></li>
+  </ul>
+
+  <form th:action="@{/admin/members/{memberId}/suspend(memberId=${member.memberId})}" method="post">
+    <button type="submit" style="background-color: red; color: white;">Suspend Member</button>
+  </form>
+
+  <!-- Display success/error messages -->
+  <div th:if="${success}" th:text="${success}" style="color: green; margin-top: 10px;"></div>
+  <div th:if="${error}" th:text="${error}" style="color: red; margin-top: 10px;"></div>
+</main>
+</body>
+</html>

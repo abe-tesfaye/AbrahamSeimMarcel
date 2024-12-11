@@ -1,45 +1,116 @@
 package com.example.nothinbutnet.Member;
 
+import com.example.nothinbutnet.Review.Review;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
-import java.util.Date;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
+@Table(name = "members")
 public class Member {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int memberId;
-    private String firstName;  // New field for first name
-    private String lastName;   // New field for last name
-    private String email;
-    private String username;
-    private String password;
-    private Date joinDate;
-    private Date updatedDate;
-    private String status;  // For example, "active" or "suspended"
+    private Long memberId;
 
-    // No-argument constructor required by JPA
+    @Column(nullable = false, unique = true)
+    private String username;
+
+    @Column(nullable = false, unique = true)
+    private String email;
+
+    @Column(nullable = false)
+    private String password;
+
+    @Column(nullable = false)
+    private LocalDate joinDate = LocalDate.now();
+
+    @Column(nullable = false)
+    private String status = "active"; // Changed from Enum to String
+
+    private LocalDate updatedDate = LocalDate.now();
+
+    @Column(nullable = false)
+    private String firstName;
+
+    @Column(nullable = false)
+    private String lastName;
+
+    @OneToMany(mappedBy = "member", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    @JsonManagedReference
+    private List<Review> reviews = new ArrayList<>();
+
     public Member() {}
 
-    // Parameterized constructor
-    public Member(String firstName, String lastName, String email, String username, String password, Date joinDate, Date updatedDate, String status) {
+    public Member(String username, String email, String password, String firstName, String lastName) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.email = email;
-        this.username = username;
-        this.password = password;
-        this.joinDate = joinDate;
-        this.updatedDate = updatedDate;
-        this.status = status;
+        this.joinDate = LocalDate.now();
+        this.updatedDate = LocalDate.now();
+        this.status = "active";
     }
 
     // Getters and Setters
-    public int getMemberId() {
+    public Long getMemberId() {
         return memberId;
     }
 
-    public void setMemberId(int memberId) {
+    public void setMemberId(Long memberId) {
         this.memberId = memberId;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public LocalDate getJoinDate() {
+        return joinDate;
+    }
+
+    public void setJoinDate(LocalDate joinDate) {
+        this.joinDate = joinDate;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public LocalDate getUpdatedDate() {
+        return updatedDate;
+    }
+
+    public void setUpdatedDate(LocalDate updatedDate) {
+        this.updatedDate = updatedDate;
     }
 
     public String getFirstName() {
@@ -58,56 +129,22 @@ public class Member {
         this.lastName = lastName;
     }
 
-    public String getEmail() {
-        return email;
+    public List<Review> getReviews() {
+        return reviews;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setReviews(List<Review> reviews) {
+        this.reviews = reviews;
     }
 
-    public String getUsername() {
-        return username;
+    // Convenience method for bi-directional relationship
+    public void addReview(Review review) {
+        reviews.add(review);
+        review.setMember(this);
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public Date getJoinDate() {
-        return joinDate;
-    }
-
-    public void setJoinDate(Date joinDate) {
-        this.joinDate = joinDate;
-    }
-
-    public Date getUpdatedDate() {
-        return updatedDate;
-    }
-
-    public void setUpdatedDate(Date updatedDate) {
-        this.updatedDate = updatedDate;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    // New method to update the updatedDate
-    public void updateLastModified() {
-        this.updatedDate = new Date(); // Set updatedDate to the current date
+    public void removeReview(Review review) {
+        reviews.remove(review);
+        review.setMember(null);
     }
 }

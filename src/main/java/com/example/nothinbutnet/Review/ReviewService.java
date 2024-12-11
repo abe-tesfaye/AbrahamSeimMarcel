@@ -1,10 +1,7 @@
 package com.example.nothinbutnet.Review;
 
-import com.example.nothinbutnet.Member.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
-import org.springframework.http.HttpStatus;
 
 import java.util.List;
 import java.util.Optional;
@@ -15,35 +12,61 @@ public class ReviewService {
     @Autowired
     private ReviewRepository reviewRepository;
 
-    @Autowired
-    private MemberService memberService; // Add MemberService to find the member
-
-    // Create a new review
-    public Review saveReview(Review review) {
-        // Ensure the member exists before saving the review
-        if (review.getMember() == null || review.getMember().getMemberId() == 0) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Member must be provided");
-        }
-        return reviewRepository.save(review);
-    }
-
-    // Retrieve all reviews
+    // Fetch all reviews
     public List<Review> getAllReviews() {
         return reviewRepository.findAll();
     }
 
-    // Retrieve a review by ID
-    public Optional<Review> getReviewById(int reviewId) {
+    // Fetch reviews by member ID
+    public List<Review> getReviewsByMemberId(Long memberId) {
+        return reviewRepository.findByMemberMemberId(memberId);
+    }
+
+    // Fetch reviews by product ID
+    public List<Review> getReviewsByProductId(Long productId) {
+        return reviewRepository.findByProductId(productId);
+    }
+
+    // Fetch a specific review by ID
+    public Optional<Review> getReviewById(Long reviewId) {
         return reviewRepository.findById(reviewId);
     }
 
-    // Retrieve all reviews for a specific member, ordered by review ID
-    public List<Review> getReviewsByMemberId(int memberId) {
-        return reviewRepository.findByMemberMemberIdOrderByReviewId(memberId);
+    // Add a new review
+    public Review addNewReview(Review review) {
+        return reviewRepository.save(review);
+    }
+
+    // Update an existing review
+    public Review updateReview(Long reviewId, Review updatedReview) {
+        return reviewRepository.findById(reviewId)
+                .map(existingReview -> {
+                    existingReview.setContent(updatedReview.getContent());
+                    existingReview.setRating(updatedReview.getRating());
+                    existingReview.setReviewDate(updatedReview.getReviewDate());
+                    existingReview.setProductId(updatedReview.getProductId());
+                    existingReview.setMember(updatedReview.getMember());
+                    return reviewRepository.save(existingReview);
+                })
+                .orElseThrow(() -> new IllegalArgumentException("Review with ID " + reviewId + " not found."));
     }
 
     // Delete a review by ID
-    public void deleteReview(int reviewId) {
-        reviewRepository.deleteById(reviewId);
+    public void deleteReview(Long reviewId) {
+        if (reviewRepository.existsById(reviewId)) {
+            reviewRepository.deleteById(reviewId);
+        } else {
+            throw new IllegalArgumentException("Review with ID " + reviewId + " not found.");
+        }
+    }
+
+    // Fetch reviews with a rating above a specific value
+    public List<Review> getReviewsWithRatingAbove(int rating) {
+        return reviewRepository.findReviewsWithRatingAbove(rating);
+    }
+
+    // Search reviews by content keyword
+    public List<Review> searchReviewsByContent(String keyword) {
+        return reviewRepository.searchReviewsByContent(keyword);
     }
 }

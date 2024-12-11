@@ -3,24 +3,27 @@ package com.example.nothinbutnet.Admin;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "admins")
 public class Admin {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long adminId;
+
+    @Column(nullable = false, unique = true)
     private String username;
+
+    @Column(nullable = false)
     private String password;
 
-    // No-argument constructor required by JPA
-    public Admin() {}
+    public Admin() {
+    }
 
-    // Parameterized constructor
     public Admin(String username, String password) {
         this.username = username;
         this.password = password;
     }
 
-    // Getters and Setters
     public Long getAdminId() {
         return adminId;
     }

@@ -1,43 +1,51 @@
 package com.example.nothinbutnet.Review;
 
+import com.example.nothinbutnet.Member.Member;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
-import com.example.nothinbutnet.Member.Member;  // Import Member entity
-import java.util.Date;
+
+import java.time.LocalDate;
 
 @Entity
+@Table(name = "reviews")
 public class Review {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int reviewId;
+    private Long reviewId;
 
+    @Column(nullable = false)
     private String content;
+
+    @Column(nullable = false)
     private int rating;
 
-    @Temporal(TemporalType.DATE)  // Specify temporal type for Date
-    private Date reviewDate;
+    @Column(nullable = false)
+    private LocalDate reviewDate = LocalDate.now();
 
-    @ManyToOne
+    @Column(nullable = false)
+    private Long productId;
+
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id", nullable = false)
+    @JsonBackReference // Prevents recursion by ignoring this property during serialization
     private Member member;
 
-    // No-argument constructor
     public Review() {}
 
-    // Parameterized constructor
-    public Review(String content, int rating, Member member) {
+    public Review(String content, int rating, LocalDate reviewDate, Long productId, Member member) {
         this.content = content;
         this.rating = rating;
-        this.reviewDate = new Date(); // Set the review date to now when the review is created
+        this.reviewDate = reviewDate;
+        this.productId = productId;
         this.member = member;
     }
-
     // Getters and Setters
-    public int getReviewId() {
+    public Long getReviewId() {
         return reviewId;
     }
 
-    public void setReviewId(int reviewId) {
+    public void setReviewId(Long reviewId) {
         this.reviewId = reviewId;
     }
 
@@ -57,12 +65,20 @@ public class Review {
         this.rating = rating;
     }
 
-    public Date getReviewDate() {
+    public LocalDate getReviewDate() {
         return reviewDate;
     }
 
-    public void setReviewDate(Date reviewDate) {
+    public void setReviewDate(LocalDate reviewDate) {
         this.reviewDate = reviewDate;
+    }
+
+    public Long getProductId() {
+        return productId;
+    }
+
+    public void setProductId(Long productId) {
+        this.productId = productId;
     }
 
     public Member getMember() {
