@@ -18,3 +18,6 @@ A basketball Apparel Web-Shop
 > The Provider is responsible for monotoring the inventory and ordering new stock based on the trends and sales statistics
 > 
 > SysAdmins can manages the customer reviews and upholds the website's terms of service
+<img width="1440" alt="Screenshot 2024-12-12 at 9 30 03 PM" src="https://github.com/user-attachments/assets/07897807-d639-4f55-a2a1-09bf1b8d0bb4" />
+<img width="1440" alt="Screenshot 2024-12-12 at 9 30 00 PM" src="https://github.com/user-attachments/assets/91037c1d-dc9d-46c1-bcdc-3a55656464b9" />
+<img width="1440" alt="Screenshot 2024-12-12 at 9 29 56 PM" src="https://github.com/user-attachments/assets/47d0d7f7-98f6-4628-966d-691c70f7d8dd" />
